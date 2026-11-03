@@ -241,8 +241,8 @@ html,body{overflow:auto!important;height:auto!important;min-height:100%}
         <div class="env">${y.slice(0,5).map(e=>{let i=e.replace("\xBB","").replace("Container ","").replace("Dose:-","Dose: ").replace(":-",": "),l=i.indexOf(": "),c=l>0?i.slice(0,l).trim():"",k=l>0?i.slice(l+2).trim():i;return`<div class="specrow"><span>${c}</span><b>${k}</b></div>`}).join("")}</div>
         <div class="cp" style="margin-top:10px">UTILITIES</div>
         <div>${w.slice(0,4).map(e=>`<div class="specrow"><span></span><b>${e.replace("\xBB","").trim()}</b></div>`).join("")}</div>
-        <a class="go" href="../jpmt-${a.id}.html">Enter the full teardown of the ${p.model} \u2192</a>
-        <a class="go ghost" href="../jpmt-line.html">Watch all six run as one line \u2192</a>
+        <a class="go" href="jpmt-${a.id}.html">Enter the full teardown of the ${p.model} \u2192</a>
+        <a class="go ghost" href="jpmt-line.html">Watch all six run as one line \u2192</a>
       </div>
       <div class="right">
         <div class="cp">WHAT THE TEARDOWN SHOWS \xB7 VERBATIM FEATURES</div>
