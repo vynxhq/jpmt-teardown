@@ -202,6 +202,9 @@ h1 .dot{color:#1f5fb2}
 .ledger{margin:26px 0 0;border-top:1px solid #e2e2e0;padding:16px 0 40px;font-size:10.5px;color:#8b8f95;line-height:1.7}
 .ledger b{color:#3c4046}
 @media(max-width:860px){.panel{flex-direction:column}.line{flex-wrap:wrap}.stn{min-width:46%}}
+/* the build shell injects the 3D kit's fixed-stage CSS; the configurator is a normal page */
+html,body{overflow:auto!important;height:auto!important;min-height:100%}
+#app{position:static!important;inset:auto!important;width:auto!important;height:auto!important;color:#16181b}
 `,b=document.createElement("style");b.textContent=M;document.head.appendChild(b);var d=document.getElementById("app"),g=a=>s.machines[a],f=a=>g(a).models.map(n=>({model:n["Model No"]||Object.values(n)[0],out:n["Production per hour"]||Object.values(n)[1]||"\u2014",extra:Object.entries(n).filter(([o])=>!/Model|Production/i.test(o)).map(([o,p])=>`${o}: ${p}`)})),m=2,t=0;function u(){let a=h[m],n=g(a.slug),o=f(a.slug);t=Math.min(t,o.length-1);let p=o[t],r=n.sections||{},y=(r.Application||[]).filter(e=>/mm|gm|g|Dose|dia|height/i.test(e)),w=r.Utilities||[],P=r.Features||[];d.innerHTML=`
   <div class="wrap">
     <header>
